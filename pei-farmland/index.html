@@ -27,9 +27,10 @@ h2{font:700 26px/1.15 var(--display);margin:0;text-wrap:balance}
 p{margin:0;max-width:65ch}
 .lede{font-size:19px;color:var(--muted)}
 section{display:grid;gap:18px}
-.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.figs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
 .fig{background:var(--surface);padding:20px;display:grid;gap:6px;align-content:start}
-.fig b{font:800 36px/1 var(--display);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+@media (min-width:760px){.figs{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.fig b{font:800 clamp(26px,6vw,36px)/1 var(--display);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
 .fig b.loss{color:var(--loss)}
 .fig span{font-size:15px;color:var(--muted)}
 .fig small{font:400 12px/1.4 var(--mono);color:var(--muted)}
@@ -127,7 +128,6 @@ header{padding-top:20px}
 footer.src{display:grid;gap:10px;font-size:14px;color:var(--muted);border-top:1px solid var(--rule);padding-top:18px}
 footer.src h2{font-size:18px;color:var(--ink)}
 footer.src ul{gap:6px}
-.figs{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
 .full-link{font:500 13px var(--mono)}
 </style>
 </head>
